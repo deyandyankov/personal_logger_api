@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = pl_api:main
+      [console_scripts]
+      initialize_pl_api_db = pl_api.scripts.initializedb:main
+      
