@@ -1,9 +1,11 @@
 CHANGES.txt
 MANIFEST.in
 README.txt
+alembic.ini
 development.ini
 production.ini
 pytest.ini
+setup.py
 pl_api/__init__.py
 pl_api/routes.py
 pl_api/tests.py
@@ -16,7 +18,7 @@ pl_api.egg-info/requires.txt
 pl_api.egg-info/top_level.txt
 pl_api/models/__init__.py
 pl_api/models/meta.py
-pl_api/models/mymodel.py
+pl_api/models/plmodels.py
 pl_api/scripts/__init__.py
 pl_api/scripts/initializedb.py
 pl_api/static/pyramid-16x16.png

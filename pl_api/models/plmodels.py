@@ -28,3 +28,10 @@ class ActivityLog(Base):
     activity_id = Column(Integer, ForeignKey(Activity.id))
     start_time = Column(DateTime, nullable=False)
     end_time = Column(DateTime)
+
+class MoodLog(Base):
+    __tablename__ = 'mood_log'
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer, ForeignKey(User.id))
+    mood = Column(Integer, nullable=False)
+    # ts
