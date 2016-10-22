@@ -49,5 +49,7 @@ def view_activity_end(request):
 @view_config(route_name='view_activity_current', renderer='json')
 def view_activity_current(request):
     current_activity_log = get_current_activity_log(request, 1)
+    if not current_activity_log:
+        return {'response': 'no current activity'}
     current_activity = request.dbsession.query(Activity).filter_by(id=current_activity_log.activity_id).first()
     return {'activity_name': current_activity.activity_name, 'start_time': current_activity_log.start_time.strftime("%Y-%m-%d %H:%M:%S")}
