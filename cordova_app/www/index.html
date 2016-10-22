@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+<!--
+    	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+//-->
+    	<script type="text/javascript" src="lib/jquery/jquery-1.8.3.min.js"></script>
+        <link rel="stylesheet" href="lib/jquery-mobile/jquery.mobile-1.4.5.min.css" />
+        <script type="text/javascript" src="lib/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+
+        <script type="text/javascript" src="js/index.js"></script>
+
+	    <title>Activity Mood</title>
+
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="header" data-position="fixed">
+                <h1>Activity Mood</h1>
+            </div>
+
+            <div data-role="ui-content" role="main">
+                <a href="#activity" class="ui-btn ui-corner-all" data-transition="slide">Activity</a>
+                <a href="#mood" class="ui-btn ui-corner-all" data-transition="slide">Mood</a>
+            </div>
+        </div>
+
+        <div data-role="page" id="activity">
+            <div data-role="header" data-position="fixed">
+                <h1>Activity</h1>
+                <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Home</a>
+            </div>
+            <div class="ui-content" role="main">
+                <a href="http://10.0.0.28:6543/activity/end">END</a><hr/>
+                <a href="http://10.0.0.28:6543/activity/work">work</a><br/>
+                <a href="http://10.0.0.28:6543/activity/uni">uni</a><br/>
+                <a href="http://10.0.0.28:6543/activity/appdev">appdev</a><br/>
+                <a href="http://10.0.0.28:6543/activity/knah">khan</a><br/>
+            </div>
+        </div>
+
+        <div data-role="page" id="mood">
+            <div data-role="header" data-position="fixed">
+                <h1>Mood</h1>
+                <a href="#home" class="ui-btn-left" data-transition="slide" data-direction="reverse">Home</a>
+            </div>
+            <div class="ui-content" role="main">
+                <a href="http://10.0.0.28:6543/mood/0">0</a>
+                <a href="http://10.0.0.28:6543/mood/1">1</a>
+                <a href="http://10.0.0.28:6543/mood/2">2</a>
+                <a href="http://10.0.0.28:6543/mood/3">3</a>
+                <a href="http://10.0.0.28:6543/mood/4">4</a>
+                <a href="http://10.0.0.28:6543/mood/5">5</a>
+                <a href="http://10.0.0.28:6543/mood/6">6</a>
+                <a href="http://10.0.0.28:6543/mood/7">7</a>
+                <a href="http://10.0.0.28:6543/mood/8">8</a>
+                <a href="http://10.0.0.28:6543/mood/9">9</a>
+                <a href="http://10.0.0.28:6543/mood/10">10</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/fastclick/fastclick.js"></script>
+
+        <script type="text/javascript">
+	        am.app.initialize();
+        </script>
+
+    </body>
+</html>
