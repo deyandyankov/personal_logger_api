@@ -5,8 +5,6 @@ from sqlalchemy.exc import DBAPIError
 import datetime
 from ..models.plmodels import *
 
-print("WOOHOO")
-
 ### helper functions
 def get_activity(request, user_id, activity_name):
     return request.dbsession.query(Activity).filter_by(user_id=user_id, activity_name=activity_name).first()
@@ -63,11 +61,9 @@ def view_activity_current(request):
     return {'activity_name': current_activity.activity_name, 'start_time': current_activity_log.start_time.strftime(strftime_format)}
 
 
-@view_config(route_name='view_asta', renderer='json')
+@view_config(route_name='view_mood_log', renderer='json')
 def view_mood_log(request):
-    return {'success': True}
-    print("asdasdasdsa")
-    num_mood = request.matchdict['num_mood']
+    num_mood = int(request.matchdict['num_mood'])
     if num_mood < 0 or num_mood > 10:
         raise Exception('0 <= mood <= 10')
     moodlog = MoodLog(user_id=1, mood=num_mood, ts=datetime.datetime.now())
