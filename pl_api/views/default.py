@@ -24,7 +24,7 @@ def get_current_activity_log(request, user_id):
     return current_activities[0]
 
 def end_current_activity(request):
-    current_activity_log = get_current_activity(request, 1)
+    current_activity_log = get_current_activity_log(request, 1)
     if current_activity_log is None:
         return 0
     current_activity_log.end_time = datetime.datetime.now()
