@@ -34,4 +34,4 @@ class MoodLog(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey(User.id))
     mood = Column(Integer, nullable=False)
-    # ts
+    ts = Column(DateTime, nullable=False)
